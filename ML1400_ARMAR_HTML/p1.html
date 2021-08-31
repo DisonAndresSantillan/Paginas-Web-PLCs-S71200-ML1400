@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p1</title>
+</head>
+<style>
+    body{
+        color:black;
+    }
+    
+}
+</style>
+<body>
+    <form>
+                
+        <h3 class="menu_control-titulo">MANDO REMOTO</h3>
+
+        <div class="marcha_paro">
+            <button class="marcha_paro_b" id="on" type="button" onclick="marcha()">
+                Marcha
+            </button>
+            <button class="marcha_paro_b" id="off" value="1" type="button" onclick="paro()">
+                Paro
+            </button>
+        </div>
+
+
+
+        <div>
+            <label for="setpoint1">
+                Setpoint 1
+            </label>
+            <input class="set" id="s1" type="number">
+            <button class="set_b" type="button" onclick="setpoint1()">
+                Set1
+            </button>
+        </div>
+
+        <h3 class="menu_control-titulo">MANDO MANUAL </h3>
+        <h4>Válvulas</h4>
+
+        <div>
+            
+            <button class="val" id="valvula1" type="button" onclick="v1()" value="1">
+                Valvula 1
+            </button>
+
+            <button class="val" type="button" onclick="v2()">
+                Valvula 2
+            </button>
+
+            <button class="val" type="button" onclick="v3()">
+                Valvula 3
+            </button>
+            
+        </div>
+
+
+
+    </form>
+
+</body>
+</html>

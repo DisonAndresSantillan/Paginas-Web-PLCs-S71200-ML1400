@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="contenido">
+        <h1>INDEX 2 </h1>
+        <form>
+            <input type="file" name="index_html" id="index_html" required>
+            <button>Visualizar</button>
+
+        </form>
+    </div>
+    <div>
+        <iframe id="vistaPrevia" type="application/pdf" width="100%" height="1000" style="border: none;"></iframe>
+
+    </div>
+
+    <script >
+    document.querySelector('#index_html').addEventListener('change', () => {
+
+    let index_html = document.querySelector('#index_html').files[0];
+    let index_htmlURL = URL.createObjectURL(index_html) + "#toolbar=0";
+    console.log(index_htmlURL);
+
+    document.querySelector('#vistaPrevia').setAttribute('src', index_htmlURL);
+    })
+    </script>
+
+</body>
+</html>

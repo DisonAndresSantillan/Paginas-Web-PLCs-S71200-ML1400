@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USER 2</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.js"></script>
+
+</head>
+<style>
+    *{
+    color: white;
+}
+body{
+    background-color: #2b2e41;
+    overflow: hidden;
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: safe center;
+    height: 7rem;
+    width: 100%;
+    background-color: #3c405a;
+}
+.displays1{
+    background-color: #3c405a;
+    border-radius: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: safe center;
+    margin: 100px;
+}
+
+.menu_titulo{
+    border-bottom:white ;
+}
+.items{
+    display: flex;
+}
+</style>
+<body>
+    <h1>USER 2</h1>
+    <canvas class="displays1" id="myChart" ></canvas>
+    <script>
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: [1, 2,3, 4, 5, 6,7,8,9,10,11,12,13],
+                datasets: [{
+                    label: 'Variable Medida',
+                    data: [12, 19, 3, 5, 2, 3,10,13,14,2,3,6,8,],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }                    
+        });
+    </script>    
+</body>
+</html>
